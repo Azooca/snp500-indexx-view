@@ -8,7 +8,10 @@ function PriceDate() {
         fetch('https://coinx500.io/price', 
         {
         method:'GET',
-        headers:{'Content-Type': 'application/json'}})
+        headers:{
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+        }})
         .then((response)=>response.json())
         .then((data)=>{
             let p = parseFloat(data['price']).toLocaleString("en-US")
