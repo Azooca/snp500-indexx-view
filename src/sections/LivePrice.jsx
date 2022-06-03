@@ -14,7 +14,8 @@ function LivePrice() {
     .then((response)=>response.json())
     .then((data)=>{
         let p = parseFloat(data['price'])
-        let price = ((p / 1000).toLocaleString("en-US")).toFixed(2)
+        p = (p / 1000).toLocaleString("en-US")
+        let price = parseFloat(p).toFixed(2)
         setPrice(price) 
     })
 }
