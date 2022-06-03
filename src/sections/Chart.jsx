@@ -12,13 +12,14 @@ function ChartSNP() {
     const chartRef = useRef();
     let dt = dataSetTemp()
     let dl = ['10:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM']
-    const [dataset, setDataset] = useState(dt)
+    let [dataset, setDataset] = useState(dt)
     const [dataLabel, setDataLabel] = useState(dl)
 
     const buildData = (period = '1d')=>{ 
         fetch('https://coinx500.io/?period='+period, {
-            method:'GET',
-            headers: {'Content-Type': 'application/json'}, 
+         
+          method:'GET', 
+          headers: {'Content-Type': 'application/json'}, 
         }).then((response)=>response.json())
         .then((data)=>{
             dt['data']=data['close']
@@ -36,7 +37,7 @@ function ChartSNP() {
     }
 
 
-useEffect(()=>buildData,[dt])
+useEffect(()=>{buildData()},[dataset])
 
   const options = {
     plugins:{legend:{display:false}},

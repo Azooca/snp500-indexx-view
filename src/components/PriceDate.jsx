@@ -5,7 +5,10 @@ function PriceDate() {
     const [dateData , setDateData] = useState('00:00')
 
     const getData = ()=>{
-        fetch('http://52.91.243.59/price', {headers:{'Content-Type': 'application/json'}})
+        fetch('https://coinx500.io/price', 
+        {
+        method:'GET',
+        headers:{'Content-Type': 'application/json'}})
         .then((response)=>response.json())
         .then((data)=>{
             let p = parseFloat(data['price']).toLocaleString("en-US")
