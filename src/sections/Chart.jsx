@@ -16,7 +16,7 @@ function ChartSNP() {
     const [dataLabel, setDataLabel] = useState(dl)
 
     const buildData = (period = '1d')=>{ 
-        fetch('http://52.91.243.59/?period='+period, {
+        fetch('https://coinx500.io/?period='+period, {
             method:'GET',
             headers: {'Content-Type': 'application/json'}, 
         }).then((response)=>response.json())
