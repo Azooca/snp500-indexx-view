@@ -21,7 +21,7 @@ function ChartSNP() {
       'Access-Control-Allow-Origin':'*'
     }
     const buildData = (period = '1d')=>{ 
-      axios.get('https://coinx500.io/price',{headers})
+      axios.get('https://coinx500.io/?period='+period,{headers})
       .then(res => {
         console.log(res)
       }).catch(function (error) {
@@ -37,6 +37,7 @@ function ChartSNP() {
           }, 
         }).then((response)=>response.json())
         .then((data)=>{
+          console.log(data)
             dt['data']=data['close']
             let newdt=dt
             setDataset(newdt)
