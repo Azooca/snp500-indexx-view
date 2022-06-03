@@ -16,21 +16,11 @@ function ChartSNP() {
     let dl = ['10:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM']
     let [dataset, setDataset] = useState(dt)
     const [dataLabel, setDataLabel] = useState(dl)
-    const headers = {
-     
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin':'*'
-    }
+   
     const buildData = (period = '1d')=>{ 
-      axios.get('https://coinx500.io/?period='+period,{headers})
-      .then(res => {
-        console.log(res)
-      }).catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+      
         fetch('https://coinx500.io/?period='+period, {
-          mode: 'no-cors',
+          
           method:'GET', 
           headers: {
             'Content-Type': 'application/json',

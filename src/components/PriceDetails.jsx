@@ -8,8 +8,7 @@ function PriceDetails() {
 
     const getData = ()=>{
         fetch('https://coinx500.io/price', 
-        {  
-          mode: 'no-cors',
+        {   
           method:'GET',
           headers:{
           'Content-Type': 'application/json',
