@@ -17,6 +17,7 @@ function ChartSNP() {
     let [dataset, setDataset] = useState(dt)
     const [dataLabel, setDataLabel] = useState(dl)
     const headers = {
+     
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin':'*'
     }
