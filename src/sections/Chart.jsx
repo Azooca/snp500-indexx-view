@@ -19,7 +19,7 @@ function ChartSNP() {
    
     const buildData = (period = '1d')=>{ 
       
-        fetch('http://127.0.0.1:8000/?period='+period, {
+        fetch('https://coinx500.io/?period='+period, {
           method:'GET', 
           headers: {
             'Content-Type': 'application/json',
