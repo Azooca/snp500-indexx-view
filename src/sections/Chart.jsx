@@ -7,9 +7,6 @@ import PriceDetails from '../components/PriceDetails';
 import axios from 'axios'
 Chart.register(...registerables);
 
-
- 
-
 function ChartSNP() {
     const chartRef = useRef();
     let dt = dataSetTemp()

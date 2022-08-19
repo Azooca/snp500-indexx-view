@@ -18,7 +18,7 @@ function NavBar() {
             <a href="https://www.indexx.ai/transparency" className='mx-6 hover:text-brand-secondary hover:font-bold'> Transparency</a>
             <a href="https://www.indexx.ai/copy-of-sign-in" className='mx-6 hover:text-brand-secondary hover:font-bold'> Sign In</a>
         </nav>
-        <button className='bg-secondary text-primary rounded-3xl p-3 w-40 shadow-lg ml-24'>
+        <button className='bg-secondary2 text-primary2 rounded-3xl p-3 w-40 shadow-lg ml-24'>
             Sign Up
         </button>
         </div>
